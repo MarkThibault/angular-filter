@@ -10,7 +10,7 @@ This is a filter component.
 
 Add the following to your dependencies:
 ```
-"angular-dropdown": "git://github.com/MarkThibault/angular-dropdown.git",
+"angular-filter": "git://github.com/MarkThibault/angular-filter.git",
 ```
 
 ### Usage
