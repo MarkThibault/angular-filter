@@ -1,0 +1,33 @@
+<div class="Wrapper" style="flex-direction: column;">
+    <div>
+        <angular-filter label="{{app.postsFilterLabel}}" text="app.postsFilterText" on-update="app.updatePostsFilterText($event);" disable="app.shouldDisable()"></angular-filter>
+    </div>
+    <br>
+    <div>
+        <button ng-click="app.disablePostsFilter()">Disable Filter</button>
+    </div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <td>User ID</td>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Body</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="post in app.posts | angularMultiPropertyFilter: ['userId', 'id', 'title', 'body'] : app.postsFilterText">
+                <td>{{post.userId}}</td>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

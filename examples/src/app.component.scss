@@ -1,0 +1,15 @@
+@import '~angular-shared-scss/src/index';
+@import '../../src/index';
+
+body {
+    font-family: sans-serif;
+    color: $cape-cod-1;
+    fill: $cape-cod-1;
+    background-color: $haze-3;
+    margin: 0;
+}
+
+.Wrapper {
+    display: flex;
+    padding: 1rem;
+}

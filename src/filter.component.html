@@ -1,0 +1,7 @@
+﻿<div class="InputGroup" ng-class="{'has-value': filter.text.length}">
+	<label class="InputGroup-label">{{filter.label}}</label>
+	<div class="InputGroup-iconWrapper">
+		<input class="InputGroup-input" type="text" ng-model="filter.text" ng-change="filter.updateText()" ng-disabled="filter.disable">
+		<div class="InputGroup-iconWrapper-icon" ng-bind-html="filter.icon"></div>
+	</div>
+</div>
